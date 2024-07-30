@@ -10,8 +10,12 @@
   <ul>
     <% repos.forEach(repo => { %>
       <li>
-        <strong><a href="<%= repo.html_url %>"><%= repo.name %></a></strong>
-        <p><%= repo.description || 'No description' %></p>
+        <a href="<%= repo.html_url %>"><%= repo.name %></a>
+        <form action="/repos/<%= repo.owner.login %>/<%= repo.name %>/contents/newfile.txt" method="post">
+          <input type="text" name="content" placeholder="File content" required>
+          <input type="text" name="message" placeholder="Commit message" required>
+          <button type="submit">Create/Update File</button>
+        </form>
       </li>
     <% }) %>
   </ul>
