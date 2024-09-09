@@ -3,8 +3,8 @@ const axios = require('axios');
 const path = require('path');
 const app = express();
 
-const CLIENT_ID = 'Ov23liEoyYQNg9NpprWf'; // Replace with your actual Client ID
-const CLIENT_SECRET = 'fb25a2e4b41d834ff1e61ea6775a26d65cbece12'; // Replace with your actual Client Secret
+const CLIENT_ID = ''; // Replace with your actual Client ID
+const CLIENT_SECRET = ''; // Replace with your actual Client Secret
 const REDIRECT_URI = 'http://localhost:3000/auth/github/callback';
 
 // Set up EJS as the view engine
